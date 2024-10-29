@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mark's Photo Gallery</title>
+	<style type="text/css">
+		body {
+			font-family: Trebuchet MS, Verdana, Helvetica, Arial;
+			padding: 0px;
+			margin: 0px;
+			background-color: white;
+		}
+
+		body .main-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		ul {
+  			list-style-type: none;
+  			margin: 0;
+  			padding: 0;
+  			overflow: hidden;
+  			background-color: black;
+  			display: flex;
+  			font-weight: bold;
+		}
+
+		li a {
+  			display: block;
+  			color: white;
+  			text-align: center;
+  			padding: 16px;
+  			text-decoration: none;
+		}
+
+		li a:hover {
+  			background-color: white;
+  			border-radius: 25px;
+			color: black;
+  			font-weight: bold;
+  			text-decoration: none;
+		}
+
+		.white-text {
+			color: white;
+		}
+
+		.headertab {
+			background-color: black;
+			padding: 30px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			margin-bottom: 30px;
+
+		}
+
+		.space {
+			padding: 2vw;
+		}
+
+		.top {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			font-size: 20px;
+		}
+
+		.main-container {
+
+			margin-top: 5vw;
+			padding: 3vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+			max-width: 50%;
+			max-height: 41vw;
+			border-radius: 25px;
+			background-color: #333;
+		}
+
+		.container {
+  			position: relative;
+  			max-width: 100vh;
+  			margin: auto;
+		}
+
+		.mySlides img {
+			border-radius: 20px;
+		}
+
+		.mySlides {
+			display: none;
+		}
+		.cursor {
+			cursor: pointer;
+		}
+		.prev, .next {
+			cursor: pointer;
+			position: absolute;
+			top: 40%;
+			width: auto;
+			padding: 16px;
+			margin-top: -50px;
+			color: white;
+			font-weight: bold;
+			font-size: 20px;
+			border-radius: 0 25px 25px 0;
+			opacity: 0.7;
+			background-color: rgba(0, 0, 0, 0);
+			transition: opacity 1s ease, background-color 1s ease;
+		}
+		.next {
+			right: 0;
+			border-radius: 25px 0 0 25px;
+		}
+		.prev:hover, .next:hover {
+			background-color: rgba(0, 0, 0, 0.8);
+			opacity: 1;
+		}
+		.caption-container {
+			text-align: center;
+			color: white;
+			font-size: 18px;
+			opacity: 0;
+			transform: translateY(20px);
+			animation: slideUp 1s ease forwards;
+			animation-delay: 0.3s;
+		}
+		@keyframes slideUp {
+			from { opacity: 0; transform: translateY(20px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		.row {
+			display: flex;
+			overflow: hidden;
+			position: relative;
+			max-width: 100%;
+			margin-top: 20px;
+		}
+		.thumbnail-container {
+			display: flex;
+			transition: transform 0.5s ease;
+		}
+		.column {
+		  	width: calc(100% / 6);
+		  	margin: 0 2px;
+		}
+		.demo {
+		  	opacity: 0.2;
+			transition: opacity 0.3s ease;
+		}
+		.active, .demo:hover {
+		  	opacity: 1;
+		}
+		.thumbnail-nav {
+			position: absolute;
+			top: 40%;
+			cursor: pointer;
+			font-size: 50px;
+			color: #333;
+			background-color: rgba(255, 255, 255, 0.7);
+			border-radius: 30%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0.6;
+			transition: opacity 0.3s;
+		}
+		.thumbnail-nav:hover {
+			opacity: 1;
+		}
+		
+		.fade {
+    		animation: fadeAnimation 1s;
+  		}
+		@keyframes fadeAnimation {
+		    from {opacity: 0.4;} 
+		    to {opacity: 1;}
+		}
+	</style>
+</head>
+<body>
+
+<div class="headertab">
+		<ul style="font-size: 1.3vw;">
+			<li><a href="Home.html" target="_self">HOME</a></li>
+			<li><a href="Hobbies.html">HOBBIES</a></li>
+			<li><a href="Photo Gallery.html" target="_self" style="color: #339acc">PHOTOS</a></li>
+			<li><a href="https://vimeo.com/markmondoy28" target="_blank">VIDEO GALLERY</a></li>
+			<li><a href="About Me.html" target="_self">ABOUT ME</a></li>
+			<li><a href="FAQS.html" target="_self">FAQS</a></li>
+			<li><a href="Contact.html" target="_self">CONTACT ME</a></li>
+		</ul>
+</div>
+
+<div class="space top">
+	<h1 style="color: #339acc">MY 	PHOTO GALLERY</h1>
+</div>
+
+<div class="main-container">
+	<div class="container">
+	  <div class="mySlides fade">
+	    <img src="https://imgur.com/14nwsEs.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/PoTAXtb.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/jn9PFhr.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/2ybVfDC.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/QxZI5g5.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/XKMVisq.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/WCdYyrz.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/yf8rOpx.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/qh6zt36.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/CsyHHpX.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/G7LMMTT.jpg" style="width:100%">
+	  </div>
+	  <div class="mySlides fade">
+	  	<img src="https://imgur.com/ycT9HNN.jpg" style="width:100%">
+	  </div>
+	  <!-- Additional mySlides divs for more photos -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	  <div class="caption-container" id="caption"></div>
+
+	  <div class="row">
+	    <div class="thumbnail-container">
+	      <div class="column">
+	        <img class="demo cursor" src="https://imgur.com/14nwsEs.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ms. July N.">
+	      </div>
+	      <div class="column">
+	      	<img class="demo cursor" src="https://imgur.com/PoTAXtb.jpg" style="width:100%" onclick="currentSlide(2)" alt="Anniversary Pictorial">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/jn9PFhr.jpg" style="width:100%" onclick="currentSlide(3)" alt="Maya Bird">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/2ybVfDC.jpg" style="width:100%" onclick="currentSlide(4)" alt="Ms. Elisha K.">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/QxZI5g5.jpg" style="width:100%" onclick="currentSlide(5)" alt="The Distant Mountains">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/XKMVisq.jpg" style="width:100%" onclick="currentSlide(6)" alt="Ms. July N.">
+	      </div>
+	      <div class="column">
+	        <img class="demo cursor" src="https://imgur.com/WCdYyrz.jpg" style="width:100%" onclick="currentSlide(7)" alt="Ms. Ronnette F.">
+	      </div>
+	      <div class="column">
+	      	<img class="demo cursor" src="https://imgur.com/yf8rOpx.jpg" style="width:100%" onclick="currentSlide(8)" alt="Torenia Flowers">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/qh6zt36.jpg" style="width:100%" onclick="currentSlide(9)" alt="Ms. Elisha K.">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/CsyHHpX.jpg" style="width:100%" onclick="currentSlide(10)" alt="Boat in the Sea">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/G7LMMTT.jpg" style="width:100%" onclick="currentSlide(11)" alt="The Word">
+	      </div>
+	      <div class="column">
+	      <img class="demo cursor" src="https://imgur.com/ycT9HNN.jpg" style="width:100%" onclick="currentSlide(12)" alt="Honey Bee">
+	      </div>
+	      </div>
+	  </div>
+	</div>
+</div>
+
+<div class="space"></div>
+
+	<script type="text/javascript">
+		let slideIndex = 1;
+		let slideInterval;
+		let thumbnailIndex = 0;
+
+		showSlides(slideIndex);
+
+		function startSlideShow() {
+		  slideInterval = setInterval(function() {
+		    plusSlides(1);
+		  }, 8000);
+		}
+
+		function resetSlideShow() {
+		  clearInterval(slideInterval);
+		  startSlideShow();
+		}
+
+		// Next ngan previous controls ini ddi
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		  resetSlideShow();
+		}
+
+		// Thumbnail image controls here
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		  resetSlideShow();
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("demo");
+		  let captionText = document.getElementById("caption");
+
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+
+		  // Hide all slides initially
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		    slides[i].classList.remove("fade");
+		  }
+
+		  // Remove active class from all thumbnails
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+
+		  // Display the current slide and update caption text
+		  slides[slideIndex-1].style.display = "block";
+		  slides[slideIndex-1].classList.add("fade");
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		  captionText.style.animation = "slideUp 1.5s ease forwards";
+		}
+
+		// Thumbnail slider controls
+		function scrollThumbnails(n) {
+		  const thumbnailContainer = document.querySelector(".thumbnail-container");
+		  const columns = document.querySelectorAll(".column");
+
+		  thumbnailIndex += n;
+		  if (thumbnailIndex < 0) thumbnailIndex = 0;
+		  if (thumbnailIndex > columns.length - 6) thumbnailIndex = columns.length - 6;
+
+		  thumbnailContainer.style.transform = `translateX(-${thumbnailIndex * (columns[0].offsetWidth + 4)}px)`;
+		}
+
+		// Start the automatic slideshow
+		startSlideShow();
+	</script>
+</body>
+</html>

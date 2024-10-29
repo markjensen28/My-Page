@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hobbies</title>
+	<style type="text/css">
+
+		body {
+		font-family: Trebuchet MS, Verdana, Helvetica, Arial;
+		padding: 0px;
+		margin: 0px;
+
+		}
+
+		ul {
+  		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+  		overflow: hidden;
+  		background-color: black;
+  		display: flex;
+  		font-weight: bold;
+		}
+
+		li a {
+  		display: block;
+  		color: white;
+  		text-align: center;
+  		padding: 16px;
+  		text-decoration: none;
+		}
+
+		li a:hover {
+  		background-color: white;
+  		border-radius: 25px;
+  		color: black;
+  		font-weight: bold;
+		}
+
+		.white-text {
+			color: white;
+		}
+
+		.headertab {
+			background-color: black;
+			padding: 30px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+
+		.container {
+            max-width: 1500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            color: #339acc;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .hobbies-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .hobbies-section img {
+            max-width: 360px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .hobbies-section img:hover {
+        	transform: scale(1.1);
+        	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hobbies-table {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            gap: 30px;
+            min-height: 44vw;
+            height: 47vw;
+            max-height: 50vw;
+        }
+
+        .hobby {
+            text-align: center;
+            font-size: 18px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.015);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+            width: 30%;
+        }
+
+        .hobby img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .list-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .list-section ul {
+            background: white;
+            padding: 20px;
+            margin-right: 20px;
+            list-style: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.015);
+        }
+
+        .list-section h3 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #339acc;
+        }
+
+        .list-section li {
+            padding: 5px 10px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .justified_text {
+        	text-align: justify;
+        }
+
+        /* Flip-Box CSS and Elements ddi hehe */
+
+        .flip-box {
+		    background-color: transparent;
+		    width: 100%;
+		    height: auto;
+		    border: 1px solid #f1f1f1;
+		    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+		}
+
+		.flip-box-inner {
+		    position: relative;
+	  	    width: 100%;
+		    height: auto;
+		    text-align: center;
+		    transition: transform 0.8s;
+		    transform-style: preserve-3d;
+		}
+
+		.flip-box:hover .flip-box-inner {
+		    transform: rotateY(180deg);
+		}
+
+		.flip-box-front, .flip-box-back {
+			position: absolute;
+			border-radius: 25px;
+			width: 100%;
+			height: auto;
+			-webkit-backface-visibility: hidden; /* Safari */
+			backface-visibility: hidden;
+		}
+
+		.flip-box-front {
+		    color: black;
+		    font-size: 1vw;
+		}
+
+		.flip-box-back {
+		    color: black;
+		    font-size: 1vw;
+		    transform: rotateY(180deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="headertab">
+		<ul style="font-size: 1.3vw;">
+			<li><a href="Home.html" target="_self">HOME</a></li>
+			<li><a href="#" style="color: #339acc">HOBBIES</a></li>
+			<li><a href="Photo Gallery.html" target="_self">PHOTOS</a></li>
+			<li><a href="https://vimeo.com/markmondoy28" target="_blank">VIDEO GALLERY</a></li>
+			<li><a href="About Me.html" target="_self">ABOUT ME</a></li>
+			<li><a href="FAQS.html" target="_self">FAQS</a></li>
+			<li><a href="Contact.html" target="_self">CONTACT ME</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+    	<h1 class="title">My Hobbies and Favorite Things</h1>
+    	<p class="subtitle">Here's a glimpse into some of the things I love and enjoy doing.</p>
+
+    	<div class="hobbies-section">
+        	<img src="https://imgur.com/leVih3r.jpeg" alt="Mark enjoying hobbies">
+    	</div>
+
+    	<h2 class="title">My Top 3 Hobbies</h2>
+    	<div class="hobbies-table">
+        	<div class="hobby">
+        		<div class="flip-box">
+        			<div class="flip-box-inner">
+        				<div class="flip-box-front">
+        					<img src="https://imgur.com/wGhqLLw.jpeg" alt="Gaming">
+        						<h3>Gaming</h3>
+            					<p>Immersing in various game genres for entertainment, strategic thinking, and relaxation.</p>
+        				</div>
+        				<div class="flip-box-back">
+        					<img src="https://imgur.com/s7IZSgu.jpeg" alt="Gaming2">
+        						<h3>Gaming</h3>
+            					<p>Immersing in various game genres for entertainment, strategic thinking, and relaxation.</p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="hobby">
+        		<div class="flip-box">
+        			<div class="flip-box-inner">
+        				<div class="flip-box-front">
+        					<img src="https://imgur.com/ambroYW.jpeg" alt="Photography">
+        						<h3>Photography</h3>
+            					<p>Capturing moments, experimenting with different angles and lighting to tell stories through images.</p>
+        				</div>
+        				<div class="flip-box-back">
+        					<img src="https://imgur.com/h1G50S5.jpeg" alt="Photography2">
+        						<h3>Photography</h3>
+            					<p>Capturing moments, experimenting with different angles and lighting to tell stories through images.</p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="hobby">
+        		<div class="flip-box">
+        			<div class="flip-box-inner">
+        				<div class="flip-box-front">
+        					<img src="https://i.imgur.com/kRIHdyJ.jpeg" alt="Eating">
+        						<h3>Eating</h3>
+            					<p>Capturing moments, experimenting with different angles and lighting to tell stories through images.</p>
+        				</div>
+        				<div class="flip-box-back">
+        					<img src="https://imgur.com/ckV9Zyi.jpeg" alt="Eating2">
+        						<h3>Eating</h3>
+            					<p>Exploring new flavors and enjoying different cuisines, from comfort food to culinary adventures!</p>
+        				</div>
+        			</div>
+        		</div>
+        </div>
+    </div>
+
+    <div class="subtitle">
+    	<p class="justified_text">
+    		Photography, gaming, and eating are my top three hobbies, each offering a unique way to explore and enjoy life. Through photography, I capture moments and experiment with different perspectives, turning ordinary scenes into stories frozen in time. Gaming fuels my love for strategy and adventure, providing an immersive escape where I can challenge myself and unwind. And when it comes to eating, I’m all about discovering new flavors, indulging in different cuisines, and enjoying the simple pleasure of great food.
+    	</p>
+    	<p>
+			Together, these hobbies let me balance creativity, fun, and exploration in both digital and real-world experiences.
+		</p>
+    </div>
+
+    <div class="list-section">
+        <ul>
+            <h3>My Favorite Foods</h3>
+            <li>Fried Rice</li>
+            <li>Spaghetti Filipino_Style</li>
+            <li>Pork Steak</li>
+            <li>Chicken Adobo</li>
+            <li>Jungle Fruit</li>
+        </ul>
+        <ul>
+            <h3>My Top 3 Goals</h3>
+            <li>To Graduate in College</li>
+            <li>Pursue my Dreams</li>
+            <li>Be Happy!</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
